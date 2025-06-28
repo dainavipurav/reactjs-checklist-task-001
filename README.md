@@ -69,12 +69,17 @@ You need to build a UI consisting of **two containers (Left and Right)** that ho
   Right Container: [Y, A]
   ```
 
+## Demo Video
+
+📹 **Watch the demo video:**
+[View demo video](./demo.mov)
+
 ## Notes
 
 ✅ The element removed is always the **topmost element** of the respective container.
+
 ✅ The element is added as the **last element** in the destination container.
+
 ✅ Arrows reflect the valid state dynamically (enabled/disabled).
 
 ---
-
-If you'd like, I can also provide **React code**, **HTML/JS code**, or **pseudo-code** to implement this! Let me know your preference.
