@@ -1,12 +1,80 @@
-# React + Vite
+Sure! Here’s a clear, professional, and well-structured **Markdown document** describing your task requirements:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Task: Dual Container Button Transfer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+You need to build a UI consisting of **two containers (Left and Right)** that hold lists of elements. Users can transfer elements between these containers using arrow buttons placed between them.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Functional Requirements
+
+1. **Containers**
+
+   - There will be **two containers**:
+
+     - **Left Container**
+     - **Right Container**
+
+   - Each container will contain a list of elements (buttons).
+
+2. **Arrow Buttons**
+
+   - **Left Arrow (⬅️)**: Moves the topmost element from the **Right Container** to the **Left Container**.
+   - **Right Arrow (➡️)**: Moves the topmost element from the **Left Container** to the **Right Container**.
+
+3. **Button Click Behavior**
+
+   - When a user clicks the **Right Arrow (➡️)**:
+
+     - The **topmost element** from the Left Container is **removed**.
+     - The element is **added as the last element** in the Right Container.
+
+   - When a user clicks the **Left Arrow (⬅️)**:
+
+     - The **topmost element** from the Right Container is **removed**.
+     - The element is **added as the last element** in the Left Container.
+
+4. **Arrow Enable/Disable Logic**
+
+   - If the **Left Container** is empty:
+
+     - The **Right Arrow (➡️)** is **disabled**.
+
+   - If the **Right Container** is empty:
+
+     - The **Left Arrow (⬅️)** is **disabled**.
+
+## Example Flow
+
+- Initial State:
+
+  ```
+  Left Container: [A, B, C]
+  Right Container: [X, Y]
+  ```
+
+- User clicks ➡️
+
+  ```
+  Left Container: [B, C]
+  Right Container: [X, Y, A]
+  ```
+
+- User clicks ⬅️
+
+  ```
+  Left Container: [B, C, X]
+  Right Container: [Y, A]
+  ```
+
+## Notes
+
+✅ The element removed is always the **topmost element** of the respective container.
+✅ The element is added as the **last element** in the destination container.
+✅ Arrows reflect the valid state dynamically (enabled/disabled).
+
+---
+
+If you'd like, I can also provide **React code**, **HTML/JS code**, or **pseudo-code** to implement this! Let me know your preference.
