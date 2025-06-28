@@ -72,7 +72,7 @@ You need to build a UI consisting of **two containers (Left and Right)** that ho
 ## Demo Video
 
 📹 **Watch the demo video:**
-[View demo video](./demo.mov)
+[View demo video](./demo.gif)
 
 ## Notes
 
